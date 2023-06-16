@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Editor - Image</title>
+
+    <!--
+      Google Fonts 
+      
+      https://fonts.google.com/specimen/Poppins
+      https://fonts.google.com/specimen/Source+Code+Pro
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+    <style>
+      :root {
+        text-align: center;
+        margin-top: 1%;
+        font-family: 'Poppins', sans-serif;
+        background: rgb(250, 250, 250)
+      }
+
+      input[type = text] {
+        display: inline;
+        white-space: break-spaces;
+        width: 7%;
+      }
+
+      #ImageSettings {
+        border-color: black;
+        border-style: solid;
+        border-width: 0.5px;
+        border-radius: 10px;
+
+        width: 40%;
+        margin: auto;
+
+        background: rgb(255, 255, 255)
+      }
+
+      img {
+        border-color:black;
+        border-width: 0.5px;
+        border-style: solid;
+        width:40%;
+      }
+
+      .box {
+        font-family: 'Source Code Pro', monospace;
+        text-align: left;
+
+        border-color: black;
+        border-style: solid;
+        border-width: 0.5px;
+        
+        margin: auto;
+        
+        width: 40%;
+
+        background-color: white;
+      }
+
+      .box p {
+        margin-left: 5%
+      }
+
+      button {
+        width: 150px;
+        height: 50px;
+
+        margin-bottom: 2.5%;
+
+        font-size: 15px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="!Canvas">
+    <h2>File Editor - Images</h2>
+    <label for="FileInput">Image:</label>
+    <input type="file" onchange="readURL(this);" id="FileInput" accept="image/*">
+    <br><br>
+
+    <img id="ImageDisplay" src="placeholder.jpg"/>
+
+    <br><br>
+    <div id="ImageSettings" style="display:none">
+      <h3>Image Settings</h3>
+    <label for="BlurSlider">Blur:</label><input type="range" min="0" max="50" value="0" id="BlurSlider" style="width:30%">
+    <input type="text" id="BlurDisplay" value="0px"></input>
+    <br>
+    <label for="GrayscaleSlider">Grayscale:</label><input type="range" min="0" max="100" value="0" id="GrayscaleSlider" style="width:30%">
+    <input type="text" id="GrayscaleDisplay" value="0%"></input>
+    <br>
+    <label for="SaturationSlider">Saturation:</label><input type="range" min="100" max="500" value="100" id="SaturationSlider" style="width:30%">
+    <input type="text" id="SaturationDisplay" value="100%"></input>
+    <br>
+    <label for="BrightnessSlider">Brightness:</label><input type="range" min="75" max="200" value="100" id="BrightnessSlider" style="width:30%">
+    <input type="text" id="BrightnessDisplay" value="100%"></input>
+    <br>
+    <label for="HueSlider">Hue:</label><input type="range" min="0" max="360" value="0" id="HueSlider" style="width:30%">
+    <input type="text" id="HueDisplay" value="0deg"></input>
+    <br>
+    <label for="ContrastSlider">Contrast:</label><input type="range" min="50" max="200" value="100" id="ContrastSlider" style="width:30%">
+    <input type="text" id="ContrastDisplay" value="100%"></input>
+    <br><br>
+    <button onclick="DownloadImage()">Download</button>
+    </div></div>
+
+
+
+    <div style="display:none" id="CanvasDiv">
+      <h2>Image</h2>
+      <canvas id="canvas">The image failed to load, sorry</canvas>
+      <p>Right click on above image and click "Save As" to download. <br>The image may be a lower resolution afterwards, but I do not know how to fix that yet ;(</p>
+      <br>
+      <h3>CSS filters:</h3>
+      <p>Single Image:</p>
+      <div class="box">
+        <p id="CSSFiltersSingle"></p>
+      </div>
+      <p>Individual Values:</p>
+      <div class="box">
+        <p id="CSSFiltersAll"></p>
+      </div>
+    </div>
+
+
+    <script src="image.js"></script>
+  </body>
+</html>
