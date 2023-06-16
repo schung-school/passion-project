@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Process</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2 class="title">Research Process</h2><br>
+    <p>In my research, I came up with a few things that an image editor should do:</p>
+
+    <div class="code">
+        <p>
+        <img src="upload.png" class="icon"> 1. Upload an image<br>
+        <img src="image.png" class="icon"> 2. Display the image<br>
+        <img src="paint.png" class="icon"> 3. Apply filters<br>
+        <img src="download.png" class="icon"> 4. Export the image 
+
+        <span id="hiddenstep" style="display:none;"><br><br>
+        <img src="css file.png" class="icon"> 5. Export CSS styles<br><span style="font-size: 0.75em;">(so you can add it to <i>your</i> website)</span></span>
+        </p>
+    </div>
+    <p id="button">But I wanted to add <span style="color:dodgerblue;text-decoration: underline; cursor:pointer;">one more step.</p></span>
+    
+
+    <br><br>
+    <a href="learning2.html" alt="Next Slide">Next Slide</a>
+
+    <script>
+        let button = document.getElementById("button")
+
+        button.addEventListener("click", function() {
+            document.getElementById('hiddenstep').style.display = "inline"
+        })
+    </script>
+    
+</body>
+</html>

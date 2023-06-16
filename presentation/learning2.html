@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How will the thing work?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <h2 class="title">How will it work?</h2><br>
+    <p>Before my research I knew there was a way to upload files built into HTML<br><span style="font-size: 0.75em"> (The coding language for websites)</span>.
+    <br><br> The only problem was that I did not know how to get the file from them.</p>
+    <p>After some research, I was able to get the URL of the uploaded image and display it, and I could use CSS filters to apply the filters.</p>
+    <br>
+    <p>An example of one of the filters:</p>
+    <label for="color">Hue: </label><input type="range" min="0" max="360" value="0" id="color" style="width:40%">
+    <br><button onclick="document.getElementById('body').style.color = 'black'; document.getElementById('body').style.webkitTextStroke = '0px rgb(250, 250, 250)'; document.getElementById('hiddenbutton').style.display = 'none'" style="display:none; font-size: 0.75em;" id="hiddenbutton">Reset</button>
+    <br><br>
+    <a href="learning3.html" alt="Next Slide">Next Slide</a>
+    
+    <script>
+        const TextColor = document.getElementById("color")
+
+        TextColor.oninput = function() {
+            document.getElementById("body").style.color = "hsl(" + TextColor.value + ", 100%, 50%)"
+            document.getElementById("body").style.webkitTextStroke = "0.025em black"
+
+            document.getElementById("hiddenbutton").style.display = "unset"
+        }
+    </script>
+</body>
+</html>

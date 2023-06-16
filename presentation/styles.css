@@ -1,0 +1,66 @@
+/*
+Google Fonts
+https://fonts.google.com/specimen/DM+Sans
+https://fonts.google.com/specimen/Merriweather+Sans
+https://fonts.google.com/specimen/Source+Code+Pro
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Merriweather+Sans:wght@500&family=Source+Code+Pro&display=swap');
+
+
+:root {
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    font-size: 150%;
+    background-color: rgb(247.5, 247.5, 247.5);
+
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.title {
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.code {
+    font-family: 'Source Code Pro', monospace;
+
+    border-color: black;
+    border-style: solid;
+    border-width: 40%;
+
+    width: 60%;
+
+    margin: auto;
+    padding: 0.5px;
+
+    text-align: left;
+
+    background-color: rgb(255, 255, 255)
+}
+
+.code p {
+    margin: 5%
+}
+
+a {
+    font-family: 'Source Code Pro', monospace;
+    color: dodgerblue;
+}
+
+img {
+    width: 15%;
+    display: inline;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.icon {
+    height: 1.5em;
+    width: 1.5em;
+    display: inline;
+}
+
+.code .icon {
+    margin-left: 0px;
+}
