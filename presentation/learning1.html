@@ -18,11 +18,13 @@
         <img src="download.png" class="icon"> 4. Export the image 
 
         <span class="hiddenstep" style="display:none;"><br><br>
-        <img src="css file.png" class="icon"> 5. Export CSS styles<br><span style="font-size: 0.75em;">(so you can add it to <i>your</i> website)</span></span>
+        <img src="css file.png" id="icon"> 5. Export CSS styles<br><span style="font-size: 0.75em;">(so you can add it to <i>your</i> website)
+        <br><br>
+        <img src="Screenshot 2023-06-20 080029"><br>
+        </span></span>
         </p>
     </div>
     <p id="button">But I wanted to add <span style="color:dodgerblue;text-decoration: underline; cursor:pointer;">one more step.</p></span>
-    
 
     <br><br>
     <a href="learning2.html" alt="Next Slide">Next Slide</a>
@@ -31,7 +33,7 @@
         let button = document.getElementById("button")
 
         button.addEventListener("click", function() {
-            document.getElementsByClassName('hiddenstep').style.display = "inline"
+            document.getElementsById('hiddenstep').style.display = "inline"
         })
     </script>
     
