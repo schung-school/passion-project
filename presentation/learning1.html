@@ -17,7 +17,7 @@
         <img src="paint.png" class="icon"> 3. Apply filters<br>
         <img src="download.png" class="icon"> 4. Export the image 
 
-        <span id="hiddenstep" style="display:none;"><br><br>
+        <span class="hiddenstep" style="display:none;"><br><br>
         <img src="css file.png" class="icon"> 5. Export CSS styles<br><span style="font-size: 0.75em;">(so you can add it to <i>your</i> website)</span></span>
         </p>
     </div>
@@ -31,7 +31,7 @@
         let button = document.getElementById("button")
 
         button.addEventListener("click", function() {
-            document.getElementById('hiddenstep').style.display = "inline"
+            document.getElementsByClass('hiddenstep').style.display = "inline"
         })
     </script>
     
